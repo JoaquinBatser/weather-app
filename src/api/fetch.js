@@ -13,19 +13,16 @@ export async function fetchWeather(query) {
     })
     const information = response.data
     const { location, current } = information
-    const { name, region, country, lat, lon } = location
-    const { temp_c: temp, is_day, condition, wind_kph, wind_degree, humidity, cloud, feelslike_c } = current
+    const { name, region, lat, lon } = location
+    const { temp_c: temp, condition, last_updated, wind_kph, wind_dir, humidity } = current
     const data = {
-      wind_kph,
-      wind_degree,
-      humidity,
-      cloud,
-      feelslike_c,
       name,
       region,
-      country,
+      wind_kph,
+      wind_dir,
+      humidity,
+      last_updated,
       temp,
-      is_day,
       condition,
       lat,
       lon,
