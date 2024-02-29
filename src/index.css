@@ -3,6 +3,7 @@
 @tailwind utilities;
 @layer base {
   html {
-    @apply bg-neutral-900;
+    @apply bg-[#101010];
+    @apply text-[#A3A3A3];
   }
 }

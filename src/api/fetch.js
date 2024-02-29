@@ -32,44 +32,23 @@ export async function fetchWeather(query) {
     console.log(error)
   }
 }
-// const fetchWeather = async () => {
-//     try {
-//       const response = await axios.request(options)
-//       console.log(response.data)
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   }
-// export async function fetchWeatherData(query = 'Buenos Aires') {
-//   try {
-//     const response = await axios.request({params.q:query,...options})
-//     const data = await response.json()
 
-//     const { location, current } = data
-//     const { name, region, country } = location
-//     const { temp_c: temp, is_day, condition, wind_kph, wind_degree, humidity, cloud, feelslike_c } = current
-//     return {
-//       wind_kph,
-//       wind_degree,
-//       humidity,
-//       cloud,
-//       feelslike_c,
-//       name,
-//       region,
-//       country,
-//       temp,
-//       is_day,
-//       condition,
-//     }
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-export function fetchMapData(query = 'Buenos Aires') {
-  try {
-    const country = query
-    return country
-  } catch (error) {
-    console.log(error)
-  }
+export async function fetchPlaces() {
+  return null
 }
+// const options = {
+//   method: 'GET',
+//   url: 'https://opentripmap-places-v1.p.rapidapi.com/%7Blang%7D/places/geoname',
+//   params: {name: 'London'},
+//   headers: {
+//     'X-RapidAPI-Key': '3834d9e582msh1b213fad5843184p131972jsnf6437bcb14a7',
+//     'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
+//   }
+// };
+
+// try {
+// 	const response = await axios.request(options);
+// 	console.log(response.data);
+// } catch (error) {
+// 	console.error(error);
+// }
